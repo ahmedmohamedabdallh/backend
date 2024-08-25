@@ -30,7 +30,6 @@ const createPost = async (req, res) => {
         res.status(201).json(newPost);
     } catch (error) {
         res.status(500).json({ error: error.message })
-        console.log(error);
     }
 };
 //getPost
@@ -43,7 +42,6 @@ const getPost = async (req, res) => {
 
     } catch (error) {
         res.status(500).json({ error: error.message })
-        console.log(error);
     }
 };
 //deletePost
@@ -60,7 +58,6 @@ const deletePost = async (req, res) => {
         res.status(200).json({ message: "Post deleted successfuly" });
     } catch (error) {
         res.status(500).json({ error: error.message })
-        console.log(error);
     }
 };
 //likeUnlikePost
@@ -88,7 +85,6 @@ const likeUnlikePost = async (req, res) => {
 
     } catch (error) {
         res.status(500).json({ error: error.message })
-        console.log(error);
     }
 };
 const replayToPost=async(req,res)=>{
@@ -112,7 +108,7 @@ try {
     res.status(200).json(reply);
 } catch (error) {
     res.status(500).json({ error: error.message })
-    console.log(error);
+    
 }
 };
 const getFeedPost=async(req,res)=>{
@@ -128,7 +124,6 @@ try {
     
 } catch (error) {
     res.status(500).json({ error: error.message })
-    console.log(error);
 }
 }
 const getUserPosts = async (req, res) => {
